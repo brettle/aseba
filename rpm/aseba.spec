@@ -4,12 +4,12 @@ Name:           aseba
 # referencing below
 %global source_major 1
 %global source_minor 5
-%global source_patch 3
+%global source_patch 4
 Version:        %{source_major}.%{source_minor}.%{source_patch}
 
 # Update the following line with the git commit hash of the revision to use
 # for example by running git show-ref -s --tags RELEASE_TAG
-%global commit b18fb8f21a866495ef379c551ef104f88d37bd72
+%global commit 78c5bb73278b958ece9a5b9d172cfa6387140c80
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 # Update the following line with the git commit has of the revision of Catch
@@ -35,7 +35,7 @@ Version:        %{source_major}.%{source_minor}.%{source_patch}
 # release version (i.e. the "Version:" line above refers to a future
 # source release version), then set the number to 0.0. Otherwise, leave the
 # the number unchanged. It will get bumped when you run rpmdev-bumpspec.
-Release:        4%{?snapshot}%{?dist}
+Release:        1%{?snapshot}%{?dist}
 Summary:        A set of tools which allow beginners to program robots easily and efficiently
 
 %global lib_pkg_name lib%{name}%{source_major}
@@ -194,6 +194,9 @@ fi
 %{_libdir}/*.so
 
 %changelog
+* Sat Nov 26 2016 Dean Brettle <dean@brettle.com> - 1.5.4-1
+- Update to upstream 1.5.4
+
 * Mon Jun 13 2016 Dean Brettle <dean@brettle.com> - 1.5.3-4
 - Use libQtWebKit-devel on SUSE
 
