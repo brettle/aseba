@@ -4,12 +4,12 @@ Name:           aseba
 # referencing below
 %global source_major 1
 %global source_minor 5
-%global source_patch 4
+%global source_patch 5
 Version:        %{source_major}.%{source_minor}.%{source_patch}
 
 # Update the following line with the git commit hash of the revision to use
 # for example by running git show-ref -s --tags RELEASE_TAG
-%global commit 78c5bb73278b958ece9a5b9d172cfa6387140c80
+%global commit b858c2e430f74dd1e50fad6667ae9bf3a072ead6
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 # Update the following line with the git commit has of the revision of Catch
@@ -194,6 +194,9 @@ fi
 %{_libdir}/*.so
 
 %changelog
+* Wed Dec 07 2016 Dean Brettle <dean@brettle.com> - 1.5.5-1
+- Sync with upstream
+
 * Sat Nov 26 2016 Dean Brettle <dean@brettle.com> - 1.5.4-1
 - Update to upstream 1.5.4
 
